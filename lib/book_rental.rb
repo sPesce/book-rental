@@ -15,6 +15,13 @@ class Book_Rental
     def self.all
         @@all
     end
+
+#     def checkout_book(book)
+
+#         book.rented_status == false
+
+#    end
+       
     
 
 

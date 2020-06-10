@@ -22,7 +22,28 @@ class Person
         end 
     
     # check all the books for this person 
+        def check_books
+            books = []
+            Book_Rental.all.each do |rental|
+              if  rental.person == self && rental.book.rented_status
+                 books << rental.book
+                 
+              end
+                
+            end
+           books
+        end
+
+        def checkout_book(book)
+
+            
+             book.rented_status = false
+                   
+         
+
+        end
+            
 
 
 
-end
+    end
